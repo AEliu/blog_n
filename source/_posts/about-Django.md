@@ -1,11 +1,13 @@
 ---
-title: about-dDjango
-urlname: about-dDjango
+title: about-Django
 tags:
-- IT
-- Python
-- Web-development
+  - IT
+  - Python
+  - Web-development
+urlname: about-Django
+date: 2020-04-21 22:47:15
 ---
+
 
 从学习 Django 开始学习 Web 开发。
 
@@ -42,9 +44,41 @@ To do list
 
 ```python
 AutoField # 做主键用，一般不需要直接使用
-BigAutoField # 与上面的类似
-IntegerField # 整数
-BigIntegerField # 与上面类似，from 里是 textinput
+SmallAutoField # 1 to 32767
+BigAutoField # 与上面的类似，1 to 9223372036854775807
+
+IntegerField # 整数，-2147483648 to 2147483647
+BigIntegerField # 与上面类似，-9223372036854775808 to 9223372036854775807，from 里是 textinput
+SmallIntegerField # -32768 to 32767
+PositiveIntegerField # 0 to 2147483647
+PositiveSmallIntegerField # 0 to 32767
+DecimalField # 十进制数，两个必须的参数，小数（decimal places）的位数和位数（必须大于小数的位数）
+FloatField # 与上述类似，但是它对应的是 Python 中的 float
+
+BooleanField # 真真假假
+NullBooleanField # 要被放弃的字段，不要用
+
+CharField # 字符串
+TextField # 文本框
+EmailField # 电子邮件地址
+SlugField
+
+DateField
+DateTimeField
+DurationField
+TimeField
+
+FileField
+FilePathField
+ImageField
+
+GenericIPAddressField
+URLField
+UUIDField
+
+ForeignKey
+ManyToManyField
+OneToOneField
 ```
 
 ## 数据库
