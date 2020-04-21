@@ -80,3 +80,47 @@ list 是可变， 而 tuple 是不可变的， 一旦创建不可修改。
 
 enumerate 枚举
 
+```python
+>>> for i, item in enumerate('Hello world'):
+    print(i, item)
+
+
+0 H
+1 e
+2 l
+3 l
+4 o
+5  
+6 w
+7 o
+8 r
+9 l
+10 d
+```
+
+zip 合并多个可迭代对象中的元素
+
+```python
+>>> for item in zip('hello',  'world'):
+    print(item)
+
+
+('h', 'w')
+('e', 'o')
+('l', 'r')
+('l', 'l')
+('o', 'd')
+>>> for item in zip('hello w',  'world'):
+    print(item)
+
+
+('h', 'w')
+('e', 'o')
+('l', 'r')
+('l', 'l')
+('o', 'd')
+```
+
+## 迭代器
+
+实现了迭代器协议的容器对象，
