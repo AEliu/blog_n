@@ -43,7 +43,9 @@ To do list
 
 每个模型被表示为 `django.db.models.Model` 类的子类，每个模型有许多类变量，它们都表示模型里的一个数据库字段（Field）。
 
-### 字段类型
+### 字段
+
+#### 字段类型
 
 ```python
 AutoField # 做主键用，一般不需要直接使用
@@ -83,6 +85,59 @@ URLField # 用于 URL 的CharField，默认长度是 200
 ForeignKey
 ManyToManyField
 OneToOneField
+```
+
+#### 字段参数
+
+一般参数，可选
+
+```python
+null # 默认 False，database-related，避免在字符串字段中使用，可以选用下一个 blank
+blank # 默认 False，validation-related
+choices # 两项的元组组成的迭代序列（如 list tuple），元组的第二项是第一项的可读名称，第二项也可以是个二项的元组序列，这样可以分组。
+db_column # 指定字段在数据库中的列名，不设置则列名为字段名
+db_index # 如果为 True，则将为此字段创建数据库索引。
+db_tablespace # 
+default # 
+editable # 
+error_messages # 
+help_text # 
+primary_key # 
+unique # 
+unique_for_date # 
+unique_for_month # 
+unique_for_year # 
+verbose_name # 字段可读名称
+validators # 
+```
+
+### Meta options
+
+```python
+abstract # 如果 abstract 是 True，那么这个模型将是一个抽象基类。
+app_label # 
+base_manager_name # 
+db_table # 指定表名
+Table names 表名 # 
+db_tablespace # 
+default_manager_name # 
+default_related_name # 
+get_latest_by # 
+managed # 
+order_with_respect_to # 
+ordering # 
+permissions # 
+default_permissions # 
+proxy # 
+required_db_features # 
+required_db_vendor # 
+select_on_save # 
+indexes # 
+unique_together # 
+index_together # 
+constraints # 
+verbose_name # 
+verbose_name_plural # 
 ```
 
 ## 数据库
