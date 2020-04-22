@@ -49,6 +49,7 @@ To do list
 AutoField # 做主键用，一般不需要直接使用
 SmallAutoField # 1 to 32767
 BigAutoField # 与上面的类似，1 to 9223372036854775807
+UUIDField # 通用唯一识别码
 
 IntegerField # 整数，-2147483648 to 2147483647
 BigIntegerField # 与上面类似，-9223372036854775808 to 9223372036854775807，from 里是 textinput
@@ -66,18 +67,18 @@ TextField # 文本框
 EmailField # 电子邮件地址
 SlugField
 
-DateField
-DateTimeField
-DurationField
-TimeField
+DateField # 日期，对应的是 Python 中的 datetime.date
+DateTimeField # 对应的是 Python 中的 datetime.datetime
+DurationField # 对应的是 Python 中的 datetime.timedelta，需要再实验下用法
+TimeField # 对应的是 Python 中的 datetime.time
 
-FileField
+FileField # 文件上传字段，两个参数：upload_to（注意值可以是个函数）与 max_length（默认100），
 FilePathField
-ImageField
+ImageField # 继承自 FileField，可验证上传是否为有效图形。结合 Pillow。
 
-GenericIPAddressField
-URLField
-UUIDField
+GenericIPAddressField # IPv4 或者 IPv6 地址
+URLField # 用于 URL 的CharField，默认长度是 200
+
 
 ForeignKey
 ManyToManyField
