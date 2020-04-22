@@ -1,15 +1,18 @@
 ---
-title: about-Django
+title: About-Django
 tags:
   - IT
   - Python
+  - Django
   - Web-development
-urlname: about-Django
+urlname: About-Django
 date: 2020-04-21 22:47:15
 ---
 
 
 从学习 Django 开始学习 Web 开发。
+
+<!-- more -->
 
 To do list
 
