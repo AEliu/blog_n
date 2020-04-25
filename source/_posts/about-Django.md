@@ -29,6 +29,11 @@ To do list
 - [] deploy
 - [] 测试
 
+## URL
+
+
+
+
 ## 视图 - view
 
 ### 函数视图 - FBV
@@ -118,11 +123,10 @@ abstract # 如果 abstract 是 True，那么这个模型将是一个抽象基类
 app_label # 
 base_manager_name # 
 db_table # 指定表名
-Table names 表名 # 
 db_tablespace # 
 default_manager_name # 
 default_related_name # 
-get_latest_by # 
+get_latest_by # 字段名或字段名的列表，通常和时间相关的字段
 managed # 
 order_with_respect_to # 
 ordering # 
@@ -137,8 +141,10 @@ unique_together #
 index_together # 
 constraints # 
 verbose_name # 
-verbose_name_plural # 
+verbose_name_plural # 复数名称
 ```
+
+一个模型类表示一个数据库表，该类的一个实例表示数据库表中的一个特定记录。在 `database API` 中两步创建一个对象：模型类实例化、调用 `save()` 保存。
 
 ## 数据库
 
