@@ -50,6 +50,9 @@ To do list
 
 ### 字段
 
+模型中的每个字段应确定适当的 Field 类的实例，以确定存储数据的列类型、生成表单时的部件以及表单验证
+
+
 #### 字段类型
 
 ```python
@@ -86,9 +89,8 @@ ImageField # 继承自 FileField，可验证上传是否为有效图形。结合
 GenericIPAddressField # IPv4 或者 IPv6 地址
 URLField # 用于 URL 的CharField，默认长度是 200
 
-
-ForeignKey
-ManyToManyField
+ForeignKey # 外健，
+ManyToManyField # 多对多的关系
 OneToOneField
 ```
 
@@ -106,7 +108,7 @@ db_tablespace #
 default # 
 editable # 
 error_messages # 
-help_text # 
+help_text # 与窗体小部件一起显示的额外“帮助”文本。 即使表单中没有使用你的字段，这对文档编写也很有用
 primary_key # 
 unique # 
 unique_for_date # 
