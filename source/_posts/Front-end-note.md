@@ -15,6 +15,8 @@ HTML (HyperText Markup Language)，超文本标记语言，由元素组成，而
 
 ## CSS
 
+### [freeCodeCamp](https://www.freecodecamp.org/learn) 基础课程随手记
+
 图片圆形外框
 
 ```css
@@ -131,5 +133,79 @@ div {
 transform: scale(2); /*比例*/
 transform: skewX(24deg); /*X 轴的倾斜*/
 ```
+
+用 CSS 画一个心
+
+```css
+<style>
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+  }
+  .heart::after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart::before {
+    content: "";
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+</style>
+<div class="heart"></div>
+```
+
+一个变色的动画
+
+```css
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rect {
+    animation-name: rainbow; /*动画的名称，在下面 @keyframes 中使用*/
+    animation-duration: 4s; /*动画的时间*/
+  }
+
+  @keyframes rainbow { /*关键帧*/
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+    }
+  }
+</style>
+<div id="rect"></div>
+```
+
+### Flexbox
 
 ## JavaScript
