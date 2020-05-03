@@ -134,7 +134,7 @@ transform: scale(2); /*比例*/
 transform: skewX(24deg); /*X 轴的倾斜*/
 ```
 
-用 CSS 画一个心
+用 CSS [画一个心](https://codepen.io/aeliu-the-decoder/pen/JjYOEjM)
 
 ```css
 <style>
@@ -173,6 +173,13 @@ transform: skewX(24deg); /*X 轴的倾斜*/
 </style>
 <div class="heart"></div>
 ```
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="aeliu-the-decoder" data-slug-hash="JjYOEjM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="heart">
+  <span>See the Pen <a href="https://codepen.io/aeliu-the-decoder/pen/JjYOEjM">
+  heart</a> by AEliu (<a href="https://codepen.io/aeliu-the-decoder">@aeliu-the-decoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 一个变色的动画
 
